@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIGA GUALEGUAYCHU</title>
+    <!--icono de la pagina-->
+    <link rel="shortcut icon" href="../img/ligalogocolor.svg">
+    <!--estilos del carrusel js-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
+    <!--estilos generales css-->
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <!--fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--Etiqueta para el carrusel-->
+    <script defer src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+    <script defer src="../script/main.js"></script>
+</head>
+<body>
+    <!--barra de navegacion-->
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__nav__logo-container">
+                <a href="../index.html"><img class="header__nav__logo-container__logo" src="../img/ligalogocolor.svg" alt=""></a>
+                <a href="../index.html" class="header__nav__logo-container__texto">futbol gualeguaychu</a>
+            </div>
+            <button class="header__nav-toggle"><img class="nav-bar" src="../ico/bars-solid.svg" alt=""></button>
+            <ul class="header__nav__menu">
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="../index.html">inicio</a>
+                </li>
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="./noticias.html">noticias</a>
+                </li>
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="#">posiciones</a>
+                </li>
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="#">calendario</a>
+                </li>
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="./contacto.html">contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!--posiciones-->
+    <main class="posiciones">
+        <h1 class="titulo-section">posiciones</h1>
+        <div class="posiciones__selectores">
+            <select name="" id="">
+                <option value="a">division a</option>
+                <option value="b">division b</option>
+            </select>
+            <select name="" id="">
+                <option value="primera">primera</option>
+                <option value="sub20">sub 20</option>
+            </select>
+        </div>
+        <table class="posiciones__tabla">
+                <thead class="posiciones__tabla__header">
+                    <tr>
+                        <th class="--border-top-left">pos</th>
+                        <th>equipo</th>
+                        <th>pts</th>
+                        <th>pj</th>
+                        <th>g</th>
+                        <th>e</th>
+                        <th>p</th>
+                        <th>gf</th>
+                        <th>gc</th>
+                        <th class="--border-top-right">dif</th>
+                    </tr>
+                </thead>
+                <tbody class="posiciones__tabla__body">
+                    <!--una fila 1-->
+                    <tr class="--row-ligthgray">
+                        <td class="pos">1</td>
+                        <td class="--tbl-text-left --td-flex">
+                            <span>
+                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/CCL.svg" alt="">
+                            </span>
+                            <span class="posiciones__tabla__equipo">central larroque</span>
+                            <span class="posiciones__tabla__equipo-responsive">ccl</span>
+                        </td>
+                        <td class="pts">43</td>
+                        <td class="pj">18</td>
+                        <td class="g">13</td>
+                        <td class="e">4</td>
+                        <td class="p">1</td>
+                        <td class="gf">35</td>
+                        <td class="gc">7</td>
+                        <td class="dif">28</td>
+                    </tr>
+                    <!--una fila 2-->
+                    <tr class="--row-gray">
+                        <td class="pos">2</td>
+                        <td class="--tbl-text-left --td-flex">
+                            <span>
+                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/deportivo_urd.svg" alt="">
+                            </span>
+                            <span class="posiciones__tabla__equipo">deportivo urdinarrain</span>
+                            <span class="posiciones__tabla__equipo-responsive">cdu</span>
+                        </td>
+                        <td class="pts">39</td>
+                        <td class="pj">18</td>
+                        <td class="g">12</td>
+                        <td class="e">3</td>
+                        <td class="p">3</td>
+                        <td class="gf">36</td>
+                        <td class="gc">16</td>
+                        <td class="dif">20</td>
+                    </tr>
+                    <!--una fila 3-->
+                    <tr class="--row-ligthgray">
+                        <td class="pos">3</td>
+                        <td class="--tbl-text-left --td-flex">
+                            <span>
+                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/juv_unida_gchu.svg" alt="">
+                            </span>
+                            <span class="posiciones__tabla__equipo">juventud unida</span>
+                            <span class="posiciones__tabla__equipo-responsive">juv (g)</span>
+                        </td>
+                        <td class="pts">39</td>
+                        <td class="pj">18</td>
+                        <td class="g">12</td>
+                        <td class="e">3</td>
+                        <td class="p">3</td>
+                        <td class="gf">32</td>
+                        <td class="gc">15</td>
+                        <td class="dif">17</td>
+                    </tr>
+                    <!--una fila 4-->
+                    <tr class="--row-gray">
+                        <td class="pos">4</td>
+                        <td class="--tbl-text-left --td-flex">
+                            <span>
+                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/juv_urd.svg" alt="">
+                            </span>
+                            <span class="posiciones__tabla__equipo">juventud urdinarrain</span>
+                            <span class="posiciones__tabla__equipo-responsive">juv (u)</span>
+                        </td>
+                        <td class="pts">33</td>
+                        <td class="pj">18</td>
+                        <td class="g">10</td>
+                        <td class="e">3</td>
+                        <td class="p">5</td>
+                        <td class="gf">35</td>
+                        <td class="gc">20</td>
+                        <td class="dif">15</td>
+                    </tr>
+                    <!--una fila 5-->
+                    <tr class="--row-ligthgray">
+                        <td class="pos">5</td>
+                        <td class="--tbl-text-left --td-flex">
+                            <span>
+                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/central_entrerriano.svg" alt="">
+                            </span>
+                            <span class="posiciones__tabla__equipo">central entrerriano</span>
+                            <span class="posiciones__tabla__equipo-responsive">cce</span>
+                        </td>
+                        <td class="pts">33</td>
+                        <td class="pj">18</td>
+                        <td class="g">10</td>
+                        <td class="e">3</td>
+                        <td class="p">5</td>
+                        <td class="gf">30</td>
+                        <td class="gc">23</td>
+                        <td class="dif">7</td>
+                    </tr>
+                    <!--una fila 6-->
+                    <tr class="--row-gray">
+                        <td class="pos">6</td>
+                        <td class="--tbl-text-left --td-flex">
+                            <span>
+                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/sudamerica.svg" alt="">
+                            </span>
+                            <span class="posiciones__tabla__equipo">sudamerica</span>
+                            <span class="posiciones__tabla__equipo-responsive">sud</span>
+                        </td>
+                        <td class="pts">26</td>
+                        <td class="pj">18</td>
+                        <td class="g">8</td>
+                        <td class="e">2</td>
+                        <td class="p">8</td>
+                        <td class="gf">18</td>
+                        <td class="gc">21</td>
+                        <td class="dif">-3</td>
+                    </tr>
+                    <!--una fila 7-->
+                    <tr class="--row-ligthgray">
+                        <td class="pos">7</td>
+                        <td class="--tbl-text-left --td-flex">
+                            <span>
+                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/SAR.svg" alt="">
+                            </span>
+                            <span class="posiciones__tabla__equipo">sarmiento</span>
+                            <span class="posiciones__tabla__equipo-responsive">sar</span>
+                        </td>
+                        <td class="pts">24</td>
+                        <td class="pj">18</td>
+                        <td class="g">7</td>
+                        <td class="e">3</td>
+                        <td class="p">8</td>
+                        <td class="gf">18</td>
+                        <td class="gc">18</td>
+                        <td class="dif">0</td>
+                    </tr>
+                    <!--una fila 8-->
+                    <tr class="--row-gray">
+                        <td class="pos">8</td>
+                        <td class="--tbl-text-left --td-flex">
+                            <span>
+                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/def_oeste.svg" alt="">
+                            </span>
+                            <span class="posiciones__tabla__equipo">defensores del oeste</span>
+                            <span class="posiciones__tabla__equipo-responsive">def</span>
+                        </td>
+                        <td class="pts">12</td>
+                        <td class="pj">18</td>
+                        <td class="g">3</td>
+                        <td class="e">3</td>
+                        <td class="p">12</td>
+                        <td class="gf">20</td>
+                        <td class="gc">40</td>
+                        <td class="dif">-20</td>
+                    </tr>
+                    <!--una fila 9-->
+                    <tr class="--row-ligthgray">
+                        <td class="pos">9</td>
+                        <td class="--tbl-text-left --td-flex">
+                            <span>
+                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/union.svg" alt="">
+                            </span>
+                            <span class="posiciones__tabla__equipo">union</span>
+                            <span class="posiciones__tabla__equipo-responsive">uni</span>
+                        </td>
+                        <td class="pts">7</td>
+                        <td class="pj">18</td>
+                        <td class="g">2</td>
+                        <td class="e">1</td>
+                        <td class="p">15</td>
+                        <td class="gf">10</td>
+                        <td class="gc">38</td>
+                        <td class="dif">-28</td>
+                    </tr>
+                    <!--una fila 10-->
+                    <tr class="--row-gray">
+                        <td class="pos --border-bottom-left">10</td>
+                        <td class="--tbl-text-left --td-flex">
+                            <span>
+                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/cerro.svg" alt="">
+                            </span>
+                            <span class="posiciones__tabla__equipo">cerro porteño</span>
+                            <span class="posiciones__tabla__equipo-responsive">cp</span>
+                        </td>
+                        <td class="pts">1</td>
+                        <td class="pj">18</td>
+                        <td class="g">0</td>
+                        <td class="e">1</td>
+                        <td class="p">17</td>
+                        <td class="gf">8</td>
+                        <td class="gc">44</td>
+                        <td class="dif --border-bottom-right">-36</td>
+                    </tr>
+                </tbody>
+        </table>
+        <a href="#" class="boton --boton-margin-top">ver calendario</a>
+    </main>
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="footer__contenido">
+            <div class="footer__contenido__left">
+                <span><img class="header__nav__logo-container__logo" src="../img/ligalogoblanco.svg" alt=""></span>
+                <h4>liga departamental de futbol gualeguaychu</h4>
+            </div>
+            <div class="footer__contenido__right">
+                <a href=""><img src="../ico/instagram-brands.svg" alt=""></a> 
+                <a href=""><img src="../ico/facebook-f-brands.svg" alt=""></a> 
+                <a href=""><img src="../ico/twitter-brands.svg" alt=""></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

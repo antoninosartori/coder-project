@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIGA GUALEGUAYCHU</title>
+    <!--icono de la pagina-->
+    <link rel="shortcut icon" href="../img/ligalogocolor.svg">
+    <!--estilos del carrusel js-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
+    <!--estilos generales css-->
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <!--fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--Etiqueta para el carrusel-->
+    <script defer src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+    <script defer src="../script/main.js"></script>
+</head>
+<body>
+    <!--barra de navegacion-->
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__nav__logo-container">
+                <a href="../index.html"><img class="header__nav__logo-container__logo" src="../img/ligalogocolor.svg" alt=""></a>
+                <a href="../index.html" class="header__nav__logo-container__texto">futbol gualeguaychu</a>
+            </div>
+            <button class="header__nav-toggle"><img class="nav-bar" src="../ico/bars-solid.svg" alt=""></button>
+            <ul class="header__nav__menu">
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="../index.html">inicio</a>
+                </li>
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="./noticias.html">noticias</a>
+                </li>
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="#">posiciones</a>
+                </li>
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="#">calendario</a>
+                </li>
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="./contacto.html">contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--calendario-->
+    <main class="calendario">
+        <h1 class="titulo-section">calendario</h1>
+        <div class="posiciones__selectores">
+            <select name="" id="">
+                <option value="a">division a</option>
+                <option value="b">division b</option>
+            </select>
+            <select name="" id="">
+                <option value="1">fecha 1</option>
+                <option value="2">fecha 2</option>
+            </select>
+            <select name="" id="">
+                <option value="primera">primera</option>
+                <option value="sub20">sub 20</option>
+            </select>
+        </div>
+        <div class="calendario__tabla">
+            <table class="posiciones__tabla">
+                <thead class="posiciones__tabla__header">
+                    <tr>
+                        <th class="--border-top-left">dia</th>
+                        <th>local</th>
+                        <th></th>
+                        <th></th>
+                        <th class="--border-top-right">visita</th>
+                    </tr>
+                </thead>
+                <tbody class="posiciones__tabla__body">
+                    <tr>
+                        <td class="pos">25/7</td>
+                        <td class="--tbl-text-left --td-flex">
+                            <span>
+                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/CCL.svg" alt="">
+                            </span>
+                            <span class="posiciones__tabla__equipo">central larroque</span>
+                            <span class="posiciones__tabla__equipo-responsive">ccl</span>
+                        </td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td class="--tbl-text-left --td-flex">
+                            <span class="posiciones__tabla__equipo">juventud unida</span>
+                            <span class="posiciones__tabla__equipo-responsive">ju (g)</span>
+                            <span>
+                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/juv_unida_gchu.svg" alt="">
+                            </span>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+        </table>
+        </div>
+    </main>
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="footer__contenido">
+            <div class="footer__contenido__left">
+                <span><img class="header__nav__logo-container__logo" src="../img/ligalogoblanco.svg" alt=""></span>
+                <h4>liga departamental de futbol gualeguaychu</h4>
+            </div>
+            <div class="footer__contenido__right">
+                <a href=""><img src="../ico/instagram-brands.svg" alt=""></a> 
+                <a href=""><img src="../ico/facebook-f-brands.svg" alt=""></a> 
+                <a href=""><img src="../ico/twitter-brands.svg" alt=""></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

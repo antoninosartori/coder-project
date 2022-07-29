@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIGA GUALEGUAYCHU</title>
+    <!--icono de la pagina-->
+    <link rel="shortcut icon" href="../img/ligalogocolor.svg">
+    <!--estilos del carrusel js-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
+    <!--estilos generales css-->
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <!--fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--Etiqueta para el carrusel-->
+    <script defer src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+    <script defer src="../script/main.js"></script>
+</head>
+<body>
+    <!--barra de navegacion-->
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__nav__logo-container">
+                <a href="../index.html"><img class="header__nav__logo-container__logo" src="../img/ligalogocolor.svg" alt=""></a>
+                <a href="../index.html" class="header__nav__logo-container__texto">futbol gualeguaychu</a>
+            </div>
+            <button class="header__nav-toggle"><img class="nav-bar" src="../ico/bars-solid.svg" alt=""></button>
+            <ul class="header__nav__menu">
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="../index.html">inicio</a>
+                </li>
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="./noticias.html">noticias</a>
+                </li>
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="./posiciones.html">posiciones</a>
+                </li>
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="#">calendario</a>
+                </li>
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="#">contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contacto">
+        <h1 class="titulo-section">contacto</h1>
+        <section class="contacto__flex-container">
+            <div class="contacto__flex-container__col-izq">
+                <div class="contacto__flex-container__col-izq__mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13383.92349863206!2d-58.5224971!3d-33.0042797!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbe34fbb72bddb3df!2sLiga%20Departamental%20De%20Futbol%20De%20Gualeguaychu!5e0!3m2!1ses!2sar!4v1658574214737!5m2!1ses!2sar" 
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="contacto__flex-container__col-izq__info">
+                    <span>
+                        <img src="../ico/location-dot-solid.svg" alt="">
+                        <p>Sta. Fe 310, Gualeguaychú, Entre Ríos</p>
+                    </span>
+                    <span>
+                        <img src="../ico/phone-solid.svg" alt="">
+                        <p>3446-123456</p>
+                    </span>
+                    <span>
+                        <img src="../ico/envelope-solid.svg" alt="">
+                        <p>ligagchu@gmail.com</p>
+                    </span>
+                </div>
+            </div>
+            <div class="contacto__flex-container__col-der">
+                <form action="">
+                    <input class="contacto__form__input" type="text" placeholder="Escribe tu nombre completo">
+                    <input class="contacto__form__input" type="email" placeholder="Escribe tu email">
+                    <textarea class="contacto__form__input" name="" id="" cols="30" rows="10" placeholder="Escribe tu mensaje"></textarea>
+                    <input class="contacto__form__input --btn-enviar" type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="footer__contenido">
+            <div class="footer__contenido__left">
+                <span><img class="header__nav__logo-container__logo" src="../img/ligalogoblanco.svg" alt=""></span>
+                <h4>liga departamental de futbol gualeguaychu</h4>
+            </div>
+            <div class="footer__contenido__right">
+                <a href=""><img src="../ico/instagram-brands.svg" alt=""></a> 
+                <a href=""><img src="../ico/facebook-f-brands.svg" alt=""></a> 
+                <a href=""><img src="../ico/twitter-brands.svg" alt=""></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

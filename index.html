@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--estilos del carrusel js-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">    
+    <!--estilos generales css-->
+    <link rel="stylesheet" href="./estilos/estilos.css">
+    <!--icono de la pagina-->
+    <link rel="shortcut icon" href="./img/ligalogocolor.svg">
+    <!--fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--Etiqueta js para el carrusel-->
+    <script defer src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+    <!--javascript-->
+    <script defer src="./script/main.js"></script>
+    <!--titulo-->
+    <title>LIGA GUALEGUAYCHU</title>
+</head>
+<body>
+    <!--barra de navegacion-->
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__nav__logo-container">
+                <a href="index.html"><img class="header__nav__logo-container__logo" src="./img/ligalogocolor.svg" alt=""></a>
+                <a href="index.html" class="header__nav__logo-container__texto">futbol gualeguaychu</a>
+            </div>
+            <button class="header__nav-toggle"><img class="nav-bar" src="./ico/bars-solid.svg" alt=""></button>
+            <ul class="header__nav__menu">
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="#">inicio</a>
+                </li>
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="./pages/noticias.html">noticias</a>
+                </li>
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="./pages/posiciones.html">posiciones</a>
+                </li>
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="#">calendario</a>
+                </li>
+                <li class="header__nav__menu__item">
+                    <a class="header__nav__menu__item__link" href="./pages/contacto.html">contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--carrusel - noticias - posiciones - galeria-->
+    <main class="index-main">
+        <!--carrusel de partidos-->
+        <section class="carrusel">
+            <a class="boton --boton-margin-btm" href="#">mas partidos</a>
+            <div class="carrusel__fila">
+                <button aria-label="anterior" class="carrusel__fila__btn-anterior carrusel__fila__boton">
+                    <span><</span>
+                </button>
+                <div class="carrusel__fila__lista">
+                    <!--un partido-->
+                    <div class="carrusel__fila__lista__partido">
+                        <span class="carrusel__fila__lista__partido__escudo-local">
+                            <img src="./img/escudos/CCL.svg" alt="">
+                        </span>
+                        <span class="carrusel__fila__lista__partido__equipo-local">Central Larroque</span>
+                        <span class="carrusel__fila__lista__partido__gol-local">1</span>
+                        <span class="carrusel__fila__lista__partido__escudo-visita">
+                            <img src="./img/escudos/SAR.svg" alt="">
+                        </span>
+                        <span class="carrusel__fila__lista__partido__equipo-visita">Sarmiento</span>
+                        <span class="carrusel__fila__lista__partido__gol-visita">0</span>
+                    </div>
+                    <!--un partido-->
+                    <div class="carrusel__fila__lista__partido">
+                        <span class="carrusel__fila__lista__partido__escudo-local">
+                            <img src="./img/escudos/juv_unida_gchu.svg" alt="">
+                        </span>
+                        <span class="carrusel__fila__lista__partido__equipo-local">Juventud Unida</span>
+                        <span class="carrusel__fila__lista__partido__gol-local">2</span>
+                        <span class="carrusel__fila__lista__partido__escudo-visita">
+                            <img src="./img/escudos/union.svg" alt="">
+                        </span>
+                        <span class="carrusel__fila__lista__partido__equipo-visita">Union</span>
+                        <span class="carrusel__fila__lista__partido__gol-visita">0</span>
+                    </div>
+                    <!--un partido-->
+                    <div class="carrusel__fila__lista__partido">
+                        <span class="carrusel__fila__lista__partido__escudo-local">
+                            <img src="./img/escudos/blackriver.svg" alt="">
+                        </span>
+                        <span class="carrusel__fila__lista__partido__equipo-local">black river</span>
+                        <span class="carrusel__fila__lista__partido__gol-local">1</span>
+                        <span class="carrusel__fila__lista__partido__escudo-visita">
+                            <img src="./img/escudos/gurises.svg" alt="">
+                        </span>
+                        <span class="carrusel__fila__lista__partido__equipo-visita">deportivo gurises</span>
+                        <span class="carrusel__fila__lista__partido__gol-visita">3</span>
+                    </div>
+                    <!--un partido-->
+                    <div class="carrusel__fila__lista__partido">
+                        <span class="carrusel__fila__lista__partido__escudo-local">
+                            <img src="./img/escudos/deportivo_urd.svg" alt="">
+                        </span>
+                        <span class="carrusel__fila__lista__partido__equipo-local">Deportivo Urd</span>
+                        <span class="carrusel__fila__lista__partido__gol-local">1</span>
+                        <span class="carrusel__fila__lista__partido__escudo-visita">
+                            <img src="./img/escudos/juv_urd.svg" alt="">
+                        </span>
+                        <span class="carrusel__fila__lista__partido__equipo-visita">Juventud Urd</span>
+                        <span class="carrusel__fila__lista__partido__gol-visita">1</span>
+                    </div>
+                    <!--un partido-->
+                    <div class="carrusel__fila__lista__partido">
+                        <span class="carrusel__fila__lista__partido__escudo-local">
+                            <img src="./img/escudos/sportivo_larroque.svg" alt="">
+                        </span>
+                        <span class="carrusel__fila__lista__partido__equipo-local">sportivo larroque</span>
+                        <span class="carrusel__fila__lista__partido__gol-local">1</span>
+                        <span class="carrusel__fila__lista__partido__escudo-visita">
+                            <img src="./img/escudos/camioneros.svg" alt="">
+                        </span>
+                        <span class="carrusel__fila__lista__partido__equipo-visita">camioneros</span>
+                        <span class="carrusel__fila__lista__partido__gol-visita">0</span>
+                    </div>
+                    <!--un partido-->
+                    <div class="carrusel__fila__lista__partido">
+                        <span class="carrusel__fila__lista__partido__escudo-local">
+                            <img src="./img/escudos/central_entrerriano.svg" alt="">
+                        </span>
+                        <span class="carrusel__fila__lista__partido__equipo-local">central entrerriano</span>
+                        <span class="carrusel__fila__lista__partido__gol-local">2</span>
+                        <span class="carrusel__fila__lista__partido__escudo-visita">
+                            <img src="./img/escudos/sudamerica.svg" alt="">
+                        </span>
+                        <span class="carrusel__fila__lista__partido__equipo-visita">sudamerica</span>
+                        <span class="carrusel__fila__lista__partido__gol-visita">1</span>
+                    </div>
+                </div>
+                <button aria-label="siguiente" class="carrusel__fila__btn-siguiente carrusel__fila__boton">
+                    <span>></span>
+                </button>
+            </div>
+        </section>
+        
+        <!--noticias-->
+        <section class="noticias">
+            <div class="noticias__fila">
+                <div class="noticias__fila__col-izq">
+                        <article class="noticia__col-articulo">
+                            <a class="noticia__col-articulo__enlace-article" href=""><h1>Novedades del Honorable Tribunal de Penas</h1></a>
+                            <p>En la ciudad de Gualeguaychú, a los catorce días del mes de Julio del 2022 en la secretaría de la Liga de Fútbol se reúne el Honorable Tribunal de Penas, con la presidencia Martin Arevalo</p>
+                            <figure class="noticia__col-articulo__img">
+                                <img src="./img/news/new_img1.png" alt="">
+                                <figcaption class="noticia__col-articulo__subt">
+                                    <span>institucional</span>
+                                </figcaption>
+                            </figure>
+                        </article>
+                </div>
+                <div class="noticias__fila__col-der">
+                        <article class="noticia__col-articulo">
+                            <a class="noticia__col-articulo__enlace-article" href=""><h2>Central Larroque derroto como local a Sarmiento</h2></a>
+                            <figure class="noticia__col-articulo__img">
+                                <img src="./img/news/new_img2.png" alt="">
+                                <figcaption class="noticia__col-articulo__subt">
+                                    <span>primera</span>
+                                </figcaption>
+                            </figure>
+                        </article>
+                        <article class="noticia__col-articulo">
+                            <a class="noticia__col-articulo__enlace-article" href=""><h2>En el Polideportivo CEF N6 se disputó el encuentro entre La Vencedora vs Sud América por el tercer y cuarto puesto</h2></a>
+                            <figure class="noticia__col-articulo__img">
+                                <img src="./img/news/new_img3.png" alt="">
+                                <figcaption class="noticia__col-articulo__subt">
+                                    <span>femenino</span>
+                                </figcaption>
+                            </figure>
+                        </article>
+                </div>
+            </div>
+            <div class="noticias__boton">
+                <a class="boton" href="./pages/noticias.html">mas noticias</a>
+            </div>
+        </section>
+        
+        <!--tabla de posiciones-->
+        <section class="index__posiciones">
+            <div class="index__posiciones__col-izq">
+                <h3>division a</h3>
+                <table class="posiciones__tabla">
+                    <thead class="posiciones__tabla__header">
+                        <tr>
+                            <th class="--border-top-left">pos</th>
+                            <th >equipo</th>
+                            <th>pts</th>
+                            <th class="--border-top-right">pj</th>
+                        </tr>
+                    </thead>
+                    <tbody class="posiciones__tabla__body">
+                        <tr class="--row-ligthgray">
+                            <td>1</td>
+                            <td class="--tbl-text-left --td-flex">
+                                <span>
+                                    <img class="carrusel__fila__lista__partido__escudo-local" src="./img/escudos/CCL.svg" alt="">
+                                </span>
+                                <span class="posiciones__tabla__equipo">central larroque</span>
+                                <span class="posiciones__tabla__equipo-responsive">ccl</span>
+                            </td>
+                            <td class="pts">43</td>
+                            <td>18</td>
+                        </tr>
+                        <tr class="--row-gray ">
+                            <td>2</td>
+                            <td class="--tbl-text-left --td-flex">
+                                <span>
+                                    <img class="carrusel__fila__lista__partido__escudo-local" src="./img/escudos/deportivo_urd.svg" alt="">
+                                </span>
+                                <span class="posiciones__tabla__equipo">deportivo urdinarrain</span>
+                                <span class="posiciones__tabla__equipo-responsive">cdu</span>
+                            </td>
+                            <td class="pts">39</td>
+                            <td>18</td>
+                        </tr>
+                        <tr class="--row-ligthgray">
+                            <td class="--border-bottom-left">3</td>
+                            <td class="--tbl-text-left --td-flex">
+                                <span>
+                                    <img class="carrusel__fila__lista__partido__escudo-local" src="./img/escudos/juv_unida_gchu.svg" alt="">
+                                </span>
+                                <span class="posiciones__tabla__equipo">juventud unida</span>
+                                <span class="posiciones__tabla__equipo-responsive">juv (g)</span>
+                            </td>
+                            <td class="pts">39</td>
+                            <td class="--border-bottom-right">18</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a class="boton" href="./pages/posiciones.html">mas</a>
+            </div>
+            
+            <div class="index__posiciones__col-der">
+                <h3>division b</h3>
+                <table class="posiciones__tabla">
+                    <thead class="posiciones__tabla__header">
+                        <tr>
+                            <th class="--border-top-left">pos</th>
+                            <th >equipo</th>
+                            <th>pts</th>
+                            <th class="--border-top-right">pj</th>
+                        </tr>
+                    </thead>
+                    <tbody class="posiciones__tabla__body">
+                        <tr class="--row-ligthgray">
+                            <td>1</td>
+                            <td class="--tbl-text-left --td-flex">
+                                <span>
+                                    <img class="carrusel__fila__lista__partido__escudo-local" src="./img/escudos/pueblonuevo.svg" alt="">
+                                </span>
+                                <span class="posiciones__tabla__equipo">pueblo nuevo</span>
+                                <span class="posiciones__tabla__equipo-responsive">cpn</span>
+                            </td>
+                            <td class="pts">33</td>
+                            <td>16</td>
+                        </tr>
+                        <tr class="--row-gray">
+                            <td>2</td>
+                            <td class="--tbl-text-left --td-flex">
+                                <span>
+                                    <img class="carrusel__fila__lista__partido__escudo-local" src="./img/escudos/gurises.svg" alt="">
+                                </span>
+                                <span class="posiciones__tabla__equipo">deportivo gurises</span>
+                                <span class="posiciones__tabla__equipo-responsive">gur</span>
+                            </td>
+                            <td class="pts">32</td>
+                            <td>16</td>
+                        </tr>
+                        <tr class="--row-ligthgray">
+                            <td class="--border-bottom-left">3</td>
+                            <td class="--tbl-text-left --td-flex">
+                                <span>
+                                    <img class="carrusel__fila__lista__partido__escudo-local" src="./img/escudos/blackriver.svg" alt="">
+                                </span>
+                                <span class="posiciones__tabla__equipo">black river</span>
+                                <span class="posiciones__tabla__equipo-responsive">riv</span>
+                            </td>
+                            <td class="pts">30</td>
+                            <td class="--border-bottom-right">16</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a class="boton" href="./pages/posiciones.html">mas</a>
+            </div>
+        </section>
+
+        <!--galeria de fotos-->
+        <section class="galeria">
+            <h3>galeria de fotos</h3>
+            <div class="galeria__grid">
+                <div class="galeria__grid__grid-item galeria__item-1"></div>
+                <div class="galeria__grid__grid-item galeria__item-2"></div>
+                <div class="galeria__grid__grid-item galeria__item-3"></div>
+                <div class="galeria__grid__grid-item galeria__item-4"></div>
+                <div class="galeria__grid__grid-item galeria__item-5"></div>
+                <div class="galeria__grid__grid-item galeria__item-6"></div>
+                <div class="galeria__grid__grid-item galeria__item-7"></div>
+            </div>
+            <a class="boton --boton-margin-btm" href="#">mas fotos</a>
+        </section>
+    </main>
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="footer__contenido">
+            <div class="footer__contenido__left">
+                <span><img class="header__nav__logo-container__logo" src="/img/ligalogoblanco.svg" alt=""></span>
+                <h4>liga departamental de futbol gualeguaychu</h4>
+            </div>
+            <div class="footer__contenido__right">
+                <a href=""><img src="./ico/instagram-brands.svg" alt=""></a> 
+                <a href=""><img src="./ico/facebook-f-brands.svg" alt=""></a> 
+                <a href=""><img src="./ico/twitter-brands.svg" alt=""></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
