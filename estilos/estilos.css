@@ -603,42 +603,42 @@ body{
 .galeria__item-1{
     grid-column: 1/2;
     grid-row: 1/2;
-    background-image: url(/img/galeria/img1.png);
+    background-image: url(../img/galeria/img1.png);
 }
 
 .galeria__item-2{
     grid-column: 2/3;
     grid-row: 1/2;
-    background-image: url(/img/galeria/img3.png);
+    background-image: url(../img/galeria/img3.png);
 }
 
 .galeria__item-3{
     grid-column: 3/4;
     grid-row: 1/2;
-    background-image: url(/img/galeria/img4.png);
+    background-image: url(../img/galeria/img4.png);
 }
 .galeria__item-4{
     grid-column: 1/2;
     grid-row: 2/4;
-    background-image: url(/img/galeria/img2.png);
+    background-image: url(../img/galeria/img2.png);
 }
 
 .galeria__item-5{
     grid-column: 2/4;
     grid-row: 2/3;
-    background-image: url(/img/galeria/img7.png);
+    background-image: url(../img/galeria/img7.png);
 }
 
 .galeria__item-6{
     grid-column: 2/3;
     grid-row: 3/4;
-    background-image: url(/img/galeria/img5.png);
+    background-image: url(../img/galeria/img5.png);
 }
 
 .galeria__item-7{
     grid-column: 3/4;
     grid-row: 3/4;
-    background-image: url(/img/galeria/img6.png);
+    background-image: url(../img/galeria/img6.png);
 }
 
 
