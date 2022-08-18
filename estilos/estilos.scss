@@ -31,10 +31,6 @@ body{
     left: 0;
     z-index: 100;
     transition: 2s all ease;
-
-    body.dark & {
-        background-color: $color3dark;
-    }
 }
 
 

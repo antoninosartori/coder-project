@@ -22,9 +22,6 @@ body.dark body {
   z-index: 100;
   transition: 2s all ease;
 }
-body.dark .header {
-  background-color: #8380a7;
-}
 
 /*--NAVEGADOR--*/
 .header__nav {
