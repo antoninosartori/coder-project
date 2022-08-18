@@ -1,18 +1,3 @@
-/*...
-elementos con z index
-    nav = 100
-    botones del carrusel = 10
-
-COLORES
-paleta de colores 2 -> tono azul
-    --color-pri: #1c2039;
-    --color-sec: #fff;
-    --color-ter: #504e66;
-    --color-cua: #d9d9d9;    
-*/
-/*variables*/
-/*colores*/
-/*fuente*/
 * {
   padding: 0;
   margin: 0;
@@ -23,6 +8,9 @@ paleta de colores 2 -> tono azul
 body {
   font-family: "roboto", sans-serif;
 }
+body.dark body {
+  background-color: #121426;
+}
 
 .header {
   background-color: #1c2039;
@@ -32,35 +20,10 @@ body {
   top: 0;
   left: 0;
   z-index: 100;
+  transition: 2s all ease;
 }
-
-/*ESTILOS GENERALES PARA LOS BOTONES*/
-.boton {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 16px;
-  margin: 0 auto;
-  padding: 8px 12px;
-  font-family: "roboto", sans-serif;
-  color: #1c2039;
-  border: 1px solid #1c2039;
-  border-radius: 10px;
-}
-
-.boton:hover {
-  background-color: #1c2039;
-  color: #fff;
-  transition: 0.2s;
-}
-
-/*usado por el boton del carrusel*/
-.--boton-margin-btm {
-  margin-bottom: 10px;
-}
-
-/*usado por el boton en pagina de posiciones*/
-.--boton-margin-top {
-  margin-top: 30px;
+body.dark .header {
+  background-color: #8380a7;
 }
 
 /*--NAVEGADOR--*/
@@ -74,7 +37,6 @@ body {
 .header__nav__logo-container { /*Es la parte izquierda, donde esta el logo*/
   display: flex;
   height: 60px;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
   margin-left: 40px;
@@ -84,15 +46,26 @@ body {
   height: 40px;
 }
 
-.header__nav__logo-container__texto { /*texto que se muestra solo en responsive*/
-  display: none;
-  font-family: "roboto", sans-serif;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-decoration: none;
+/*modo oscuro o claro*/
+.header__nav__modo-oscuro-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.header__nav__modo-oscuro-container i {
+  position: absolute;
+  font-size: 20px;
   color: #fff;
-  font-size: 18px;
-  margin: 0 auto;
+  transition: all 0.2s;
+}
+.header__nav__modo-oscuro-container i:hover {
+  cursor: pointer;
+  filter: contrast(80%);
+  transition: all 0.2s;
+}
+
+.btn-invisible {
+  opacity: 0;
 }
 
 .header__nav__menu { /*Es el contenedor de la lista(ul)*/
@@ -113,7 +86,6 @@ body {
   padding: 5px 12px;
   border-radius: 5px;
 }
-
 .header__nav__menu__item__link:hover {
   background-color: rgba(217, 217, 217, 0.2588235294);
   transition: 0.2s;
@@ -124,9 +96,44 @@ body {
   width: 40px;
   border: none;
 }
-
 .header__nav-toggle:hover {
   cursor: pointer;
+}
+
+/*ESTILOS GENERALES PARA LOS BOTONES*/
+.boton {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin: 0 auto;
+  padding: 8px 12px;
+  font-family: "roboto", sans-serif;
+  color: #1c2039;
+  border: 1px solid #1c2039;
+  border-radius: 10px;
+}
+.boton:hover {
+  background-color: #1c2039;
+  color: #fff;
+  transition: 0.2s;
+}
+body.dark .boton {
+  color: #fff;
+  border: 1px solid #fff;
+}
+body.dark .boton:hover {
+  background-color: #fff;
+  color: #121426;
+}
+
+/*usado por el boton del carrusel*/
+.--boton-margin-btm {
+  margin-bottom: 10px;
+}
+
+/*usado por el boton en pagina de posiciones*/
+.--boton-margin-top {
+  margin-top: 30px;
 }
 
 /*INDEX - MAIN*/
@@ -135,6 +142,10 @@ body {
   height: 100%;
   width: 100%;
   padding-top: 60px;
+  transition: 2s all ease;
+}
+body.dark .index-main {
+  background-color: #121426;
 }
 
 /*CONTENEDOR DE PARTIDOS*/
@@ -174,6 +185,10 @@ body {
   cursor: pointer;
   opacity: 40%;
 }
+body.dark .carrusel__fila__btn-anterior, body.dark .carrusel__fila__btn-siguiente {
+  background-color: #fff;
+  color: #121426;
+}
 
 .carrusel__fila__btn-anterior {
   left: 5px;
@@ -208,6 +223,20 @@ body {
   border: 1px solid #1c2039;
   border-radius: 10px;
 }
+.carrusel__fila__lista__partido:hover {
+  background-color: #504e66;
+  color: #fff;
+  transition: 0.2s;
+}
+body.dark .carrusel__fila__lista__partido {
+  background-color: #121426;
+  color: #fff;
+  border: 1px solid #fff;
+}
+body.dark .carrusel__fila__lista__partido:hover {
+  background-color: #8380a7;
+  color: #fff;
+}
 .carrusel__fila__lista__partido span {
   font-family: "roboto", sans-serif;
   font-size: 18px;
@@ -215,12 +244,6 @@ body {
   padding: 2%;
   align-items: center;
   justify-content: center;
-}
-
-.carrusel__fila__lista__partido:hover {
-  background-color: #504e66;
-  color: #fff;
-  transition: 0.2s;
 }
 
 .carrusel__fila__lista__partido__escudo-local, .carrusel__fila__lista__partido__escudo-visita {
@@ -244,6 +267,9 @@ body {
   grid-column: 2/3;
   grid-row: 1/2;
   border-bottom: 1px solid #1c2039;
+}
+body.dark .carrusel__fila__lista__partido__equipo-local {
+  border-bottom: 1px solid #fff;
 }
 
 .carrusel__fila__lista__partido__equipo-visita {
@@ -282,6 +308,9 @@ body {
   font-weight: 700;
   color: #1c2039;
 }
+body.dark .noticias__fila h1 {
+  color: #fff;
+}
 .noticias__fila h2 {
   font-size: 25px;
   font-family: "roboto", sans-serif;
@@ -289,12 +318,18 @@ body {
   color: #1c2039;
   flex-grow: 1;
 }
+body.dark .noticias__fila h2 {
+  color: #fff;
+}
 .noticias__fila p {
   font-size: 20px;
   font-family: "roboto", sans-serif;
   color: #1c2039;
   flex-grow: 1;
   padding: 10px 0;
+}
+body.dark .noticias__fila p {
+  color: #fff;
 }
 
 /*contenedor separador lado izquierdo*/
@@ -332,17 +367,23 @@ body {
   padding: 10px;
   height: 100%;
 }
-
 .noticia__col-articulo:hover {
   background-color: rgba(217, 217, 217, 0.2588235294);
   border-radius: 10px;
   transition: 0.2s;
+}
+body.dark .noticia__col-articulo:hover {
+  background-color: rgba(227, 227, 227, 0.3568627451);
 }
 
 /*contenedor del figure*/
 .noticia__col-articulo__img {
   position: relative;
   /*estilo de la imagen de la noticia*/
+}
+.noticia__col-articulo__img:hover .noticia__col-articulo__subt {
+  opacity: 1;
+  transition: 0.2s;
 }
 .noticia__col-articulo__img img {
   width: 100%;
@@ -361,11 +402,6 @@ body {
   position: absolute;
   bottom: 15px;
   left: 15px;
-}
-
-.noticia__col-articulo__img:hover .noticia__col-articulo__subt {
-  opacity: 1;
-  transition: 0.2s;
 }
 
 /*ESTILOS DEL BOTON DE NEWS*/
@@ -395,6 +431,9 @@ body {
   font-size: 25px;
   text-transform: uppercase;
   text-align: center;
+}
+body.dark .index__posiciones h3 {
+  color: #fff;
 }
 
 .index__posiciones__col-izq {
@@ -440,6 +479,11 @@ body {
 }
 .posiciones__tabla__body tr td {
   padding: 5px;
+}
+.posiciones__tabla__body tr td:hover {
+  cursor: pointer;
+  background-color: #504e66;
+  color: #fff;
 }
 
 /*hace que el texto de la columna equipos se alinee a la izq*/
@@ -496,6 +540,9 @@ body {
   margin-bottom: 30px;
   color: #1c2039;
 }
+body.dark .galeria h3 {
+  color: #fff;
+}
 
 .galeria__grid {
   display: grid;
@@ -516,7 +563,6 @@ body {
   filter: brightness(60%);
   transition: all 0.7s;
 }
-
 .galeria__grid__grid-item:hover {
   cursor: pointer;
   filter: grayscale(0);
@@ -607,10 +653,29 @@ body {
 .footer__contenido__right img {
   height: 26px;
 }
-
 .footer__contenido__right img:hover {
   filter: contrast(10%);
   transition: 0.2s;
+}
+
+/* estilos generales para la clase container */
+.container {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  background-color: #fff;
+}
+body.dark .container {
+  background-color: #121426;
+  transition: all 2s ease;
+}
+
+.containerScrolleable {
+  width: 100vw;
+  background-color: #fff;
+  transition: all 2s ease;
+}
+body.dark .containerScrolleable {
+  background-color: #121426;
 }
 
 /*---------------------------PAGINA DE NOTICIAS------------------------------------------------------------------------------------------------------------------*/
@@ -662,6 +727,9 @@ body {
   margin-top: 30px;
   color: #1c2039;
 }
+body.dark .titulo-section {
+  color: #fff;
+}
 
 .posiciones__selectores {
   width: 100%;
@@ -682,18 +750,17 @@ body {
   border-radius: 10px;
   outline: none;
 }
-.posiciones__selectores option {
-  color: #fff;
-  background-color: #504e66;
-  border-radius: 10px;
-  outline: none;
-}
-
 .posiciones__selectores select:hover {
   background-color: #504e66;
   color: #fff;
   cursor: pointer;
   transition: all 0.2s;
+}
+.posiciones__selectores option {
+  color: #fff;
+  background-color: #504e66;
+  border-radius: 10px;
+  outline: none;
 }
 
 .posiciones__tabla__equipo-responsive {
@@ -702,12 +769,6 @@ body {
 
 .pts {
   font-weight: 700;
-}
-
-.posiciones__tabla__body td:hover {
-  cursor: pointer;
-  background-color: #504e66;
-  color: #fff;
 }
 
 /*-----------------PAGINA DE CALENDARIO----------------------------------------------------------------------------------------------------------------------------*/
@@ -741,6 +802,10 @@ body {
   width: 100%;
   padding-top: 70px;
   overflow: auto;
+  background-color: #fff;
+}
+body.dark .contacto {
+  background-color: #121426;
 }
 
 .contacto__flex-container {
@@ -768,7 +833,6 @@ body {
   border-radius: 10px;
   background-color: #fff;
 }
-
 .contacto__flex-container__col-izq__mapa:hover {
   background-color: #1c2039;
   transition: 0.4s;
@@ -789,9 +853,15 @@ iframe {
   color: #1c2039;
   padding: 10px;
 }
-.contacto__flex-container__col-izq__info span img {
+body.dark .contacto__flex-container__col-izq__info span {
+  color: #fff;
+}
+.contacto__flex-container__col-izq__info span i {
   height: 20px;
   margin-right: 20px;
+}
+body.dark .contacto__flex-container__col-izq__info span i {
+  color: #fff;
 }
 
 .contacto__flex-container__col-der {
@@ -819,7 +889,10 @@ iframe {
   outline: none;
   background-color: #1c2039;
 }
-
+.contacto__form__input:hover {
+  background-color: #504e66;
+  transition: 0.2s;
+}
 .contacto__form__input::placeholder {
   font-size: 16px;
   font-weight: 100;
@@ -828,11 +901,6 @@ iframe {
 
 .--btn-enviar:hover {
   cursor: pointer;
-}
-
-.contacto__form__input:hover {
-  background-color: #504e66;
-  transition: 0.2s;
 }
 
 /*--ADAPTACION A DISTINTAS MEDIDAS DE ANCHO--*/
@@ -1123,7 +1191,6 @@ iframe {
     width: 100%;
     height: 60px;
     background-color: #1c2039;
-    margin-top: 10px;
   }
   .footer__contenido {
     justify-content: center;

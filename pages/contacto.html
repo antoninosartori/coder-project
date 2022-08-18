@@ -7,16 +7,14 @@
     <title>LIGA GUALEGUAYCHU</title>
     <!--icono de la pagina-->
     <link rel="shortcut icon" href="../img/ligalogocolor.svg">
-    <!--estilos del carrusel js-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
+    <!--link de fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--estilos generales css-->
     <link rel="stylesheet" href="../estilos/estilos.css">
     <!--fuentes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <!--Etiqueta para el carrusel-->
-    <script defer src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
     <script defer src="../script/main.js"></script>
 </head>
 <body>
@@ -25,7 +23,10 @@
         <nav class="header__nav">
             <div class="header__nav__logo-container">
                 <a href="../index.html"><img class="header__nav__logo-container__logo" src="../img/ligalogocolor.svg" alt=""></a>
-                <a href="../index.html" class="header__nav__logo-container__texto">futbol gualeguaychu</a>
+            </div>
+            <div class="header__nav__modo-oscuro-container">
+                <i id="sol" class="fa-solid fa-sun btn-invisible"></i>
+                <i id="luna" class="fa-solid fa-moon"></i>
             </div>
             <button class="header__nav-toggle"><img class="nav-bar" src="../ico/bars-solid.svg" alt=""></button>
             <ul class="header__nav__menu">
@@ -60,15 +61,15 @@
                 </div>
                 <div class="contacto__flex-container__col-izq__info">
                     <span>
-                        <img src="../ico/location-dot-solid.svg" alt="">
+                        <i class="fa-solid fa-location-dot"></i>
                         <p>Sta. Fe 310, Gualeguaychú, Entre Ríos</p>
                     </span>
                     <span>
-                        <img src="../ico/phone-solid.svg" alt="">
+                        <i class="fa-solid fa-phone"></i>
                         <p>3446-123456</p>
                     </span>
                     <span>
-                        <img src="../ico/envelope-solid.svg" alt="">
+                        <i class="fa-solid fa-envelope"></i>
                         <p>ligagchu@gmail.com</p>
                     </span>
                 </div>

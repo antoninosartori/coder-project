@@ -7,16 +7,14 @@
     <title>LIGA GUALEGUAYCHU</title>
     <!--icono de la pagina-->
     <link rel="shortcut icon" href="../img/ligalogocolor.svg">
-    <!--estilos del carrusel js-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
+    <!--link de fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--estilos generales css-->
     <link rel="stylesheet" href="../estilos/estilos.css">
     <!--fuentes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <!--Etiqueta para el carrusel-->
-    <script defer src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
     <script defer src="../script/main.js"></script>
 </head>
 <body>
@@ -25,7 +23,10 @@
         <nav class="header__nav">
             <div class="header__nav__logo-container">
                 <a href="../index.html"><img class="header__nav__logo-container__logo" src="../img/ligalogocolor.svg" alt=""></a>
-                <a href="../index.html" class="header__nav__logo-container__texto">futbol gualeguaychu</a>
+            </div>
+            <div class="header__nav__modo-oscuro-container">
+                <i id="sol" class="fa-solid fa-sun btn-invisible"></i>
+                <i id="luna" class="fa-solid fa-moon"></i>
             </div>
             <button class="header__nav-toggle"><img class="nav-bar" src="../ico/bars-solid.svg" alt=""></button>
             <ul class="header__nav__menu">
@@ -49,24 +50,49 @@
     </header>
 
     <!--noticias-->
-    <main class="noticias noticias-pagina">
-        <!--titulo-->
-        <h1 class="titulo-section">noticias</h1>
-        <!--fila grande de noticia-->
-        <div class="noticias__fila">
-            <div class="noticias__fila__col-izq">
-                    <article class="noticia__col-articulo">
-                        <a class="noticia__col-articulo__enlace-article" href=""><h2>Novedades del Honorable Tribunal de Penas</h2></a>
-                        <p>En la ciudad de Gualeguaychú, a los catorce días del mes de Julio del 2022 en la secretaría de la Liga de Fútbol se reúne el Honorable Tribunal de Penas, con la presidencia Martin Arevalo</p>
-                        <figure class="noticia__col-articulo__img">
-                            <img src="../img/news/new_img1.png" alt="">
-                            <figcaption class="noticia__col-articulo__subt">
-                                <span>institucional</span>
-                            </figcaption>
-                        </figure>
-                    </article>
+    <main class="containerScrolleable">
+        <section class="noticias noticias-pagina">
+            <!--titulo-->
+            <h1 class="titulo-section">noticias</h1>
+            <!--fila grande de noticia-->
+            <div class="noticias__fila">
+                <div class="noticias__fila__col-izq">
+                        <article class="noticia__col-articulo">
+                            <a class="noticia__col-articulo__enlace-article" href=""><h2>Novedades del Honorable Tribunal de Penas</h2></a>
+                            <p>En la ciudad de Gualeguaychú, a los catorce días del mes de Julio del 2022 en la secretaría de la Liga de Fútbol se reúne el Honorable Tribunal de Penas, con la presidencia Martin Arevalo</p>
+                            <figure class="noticia__col-articulo__img">
+                                <img src="../img/news/new_img1.png" alt="">
+                                <figcaption class="noticia__col-articulo__subt">
+                                    <span>institucional</span>
+                                </figcaption>
+                            </figure>
+                        </article>
+                </div>
+                <div class="noticias__fila__col-der">
+                        <article class="noticia__col-articulo">
+                            <a class="noticia__col-articulo__enlace-article" href=""><h2>Central Larroque derroto como local a Sarmiento</h2></a>
+                            <figure class="noticia__col-articulo__img">
+                                <img src="../img/news/new_img2.png" alt="">
+                                <figcaption class="noticia__col-articulo__subt">
+                                    <span>primera</span>
+                                </figcaption>
+                            </figure>
+                        </article>
+                        <article class="noticia__col-articulo">
+                            <a class="noticia__col-articulo__enlace-article" href=""><h2>En el Polideportivo CEF N6 se disputó el encuentro entre La Vencedora vs Sud América por el tercer y cuarto puesto</h2></a>
+                            <figure class="noticia__col-articulo__img">
+                                <img src="../img/news/new_img3.png" alt="">
+                                <figcaption class="noticia__col-articulo__subt">
+                                    <span>femenino</span>
+                                </figcaption>
+                            </figure>
+                        </article>
+                </div>
             </div>
-            <div class="noticias__fila__col-der">
+            <!--fila de noticia de 4 columnas-->
+            <div class="noticias__fila">
+                <!--una fila con cuatro columnas-->
+                <div class="noticias__fila__4-col">
                     <article class="noticia__col-articulo">
                         <a class="noticia__col-articulo__enlace-article" href=""><h2>Central Larroque derroto como local a Sarmiento</h2></a>
                         <figure class="noticia__col-articulo__img">
@@ -77,91 +103,68 @@
                         </figure>
                     </article>
                     <article class="noticia__col-articulo">
-                        <a class="noticia__col-articulo__enlace-article" href=""><h2>En el Polideportivo CEF N6 se disputó el encuentro entre La Vencedora vs Sud América por el tercer y cuarto puesto</h2></a>
+                        <a class="noticia__col-articulo__enlace-article" href=""><h2>Central Larroque derroto como local a Sarmiento</h2></a>
                         <figure class="noticia__col-articulo__img">
-                            <img src="../img/news/new_img3.png" alt="">
+                            <img src="../img/news/new_img2.png" alt="">
                             <figcaption class="noticia__col-articulo__subt">
-                                <span>femenino</span>
+                                <span>primera</span>
                             </figcaption>
                         </figure>
                     </article>
+                    <article class="noticia__col-articulo">
+                        <a class="noticia__col-articulo__enlace-article" href=""><h2>Central Larroque derroto como local a Sarmiento</h2></a>
+                        <figure class="noticia__col-articulo__img">
+                            <img src="../img/news/new_img2.png" alt="">
+                            <figcaption class="noticia__col-articulo__subt">
+                                <span>primera</span>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="noticia__col-articulo">
+                        <a class="noticia__col-articulo__enlace-article" href=""><h2>Central Larroque derroto como local a Sarmiento</h2></a>
+                        <figure class="noticia__col-articulo__img">
+                            <img src="../img/news/new_img2.png" alt="">
+                            <figcaption class="noticia__col-articulo__subt">
+                                <span>primera</span>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </div>
             </div>
-        </div>
-        <!--fila de noticia de 4 columnas-->
-        <div class="noticias__fila">
-            <!--una fila con cuatro columnas-->
-            <div class="noticias__fila__4-col">
-                <article class="noticia__col-articulo">
-                    <a class="noticia__col-articulo__enlace-article" href=""><h2>Central Larroque derroto como local a Sarmiento</h2></a>
-                    <figure class="noticia__col-articulo__img">
-                        <img src="../img/news/new_img2.png" alt="">
-                        <figcaption class="noticia__col-articulo__subt">
-                            <span>primera</span>
-                        </figcaption>
-                    </figure>
-                </article>
-                <article class="noticia__col-articulo">
-                    <a class="noticia__col-articulo__enlace-article" href=""><h2>Central Larroque derroto como local a Sarmiento</h2></a>
-                    <figure class="noticia__col-articulo__img">
-                        <img src="../img/news/new_img2.png" alt="">
-                        <figcaption class="noticia__col-articulo__subt">
-                            <span>primera</span>
-                        </figcaption>
-                    </figure>
-                </article>
-                <article class="noticia__col-articulo">
-                    <a class="noticia__col-articulo__enlace-article" href=""><h2>Central Larroque derroto como local a Sarmiento</h2></a>
-                    <figure class="noticia__col-articulo__img">
-                        <img src="../img/news/new_img2.png" alt="">
-                        <figcaption class="noticia__col-articulo__subt">
-                            <span>primera</span>
-                        </figcaption>
-                    </figure>
-                </article>
-                <article class="noticia__col-articulo">
-                    <a class="noticia__col-articulo__enlace-article" href=""><h2>Central Larroque derroto como local a Sarmiento</h2></a>
-                    <figure class="noticia__col-articulo__img">
-                        <img src="../img/news/new_img2.png" alt="">
-                        <figcaption class="noticia__col-articulo__subt">
-                            <span>primera</span>
-                        </figcaption>
-                    </figure>
-                </article>
+            <!--fila de noticia de 3 columnas-->
+            <div class="noticias__fila">
+                <!--una fila con tres columnas-->
+                <div class="noticias__fila__3-col">
+                    <article class="noticia__col-articulo">
+                        <a class="noticia__col-articulo__enlace-article" href=""><h2>Central Larroque derroto como local a Sarmiento</h2></a>
+                        <figure class="noticia__col-articulo__img">
+                            <img src="../img/news/new_img2.png" alt="">
+                            <figcaption class="noticia__col-articulo__subt">
+                                <span>primera</span>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="noticia__col-articulo">
+                        <a class="noticia__col-articulo__enlace-article" href=""><h2>Central Larroque </h2></a>
+                        <figure class="noticia__col-articulo__img">
+                            <img src="../img/news/new_img2.png" alt="">
+                            <figcaption class="noticia__col-articulo__subt">
+                                <span>primera</span>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="noticia__col-articulo">
+                        <a class="noticia__col-articulo__enlace-article" href=""><h2>Central Larroque derroto como local a Sarmiento Central Larroque derroto</h2></a>
+                        <figure class="noticia__col-articulo__img">
+                            <img src="../img/news/new_img2.png" alt="">
+                            <figcaption class="noticia__col-articulo__subt">
+                                <span>primera</span>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </div>
             </div>
-        </div>
-        <!--fila de noticia de 3 columnas-->
-        <div class="noticias__fila">
-            <!--una fila con tres columnas-->
-            <div class="noticias__fila__3-col">
-                <article class="noticia__col-articulo">
-                    <a class="noticia__col-articulo__enlace-article" href=""><h2>Central Larroque derroto como local a Sarmiento</h2></a>
-                    <figure class="noticia__col-articulo__img">
-                        <img src="../img/news/new_img2.png" alt="">
-                        <figcaption class="noticia__col-articulo__subt">
-                            <span>primera</span>
-                        </figcaption>
-                    </figure>
-                </article>
-                <article class="noticia__col-articulo">
-                    <a class="noticia__col-articulo__enlace-article" href=""><h2>Central Larroque </h2></a>
-                    <figure class="noticia__col-articulo__img">
-                        <img src="../img/news/new_img2.png" alt="">
-                        <figcaption class="noticia__col-articulo__subt">
-                            <span>primera</span>
-                        </figcaption>
-                    </figure>
-                </article>
-                <article class="noticia__col-articulo">
-                    <a class="noticia__col-articulo__enlace-article" href=""><h2>Central Larroque derroto como local a Sarmiento Central Larroque derroto</h2></a>
-                    <figure class="noticia__col-articulo__img">
-                        <img src="../img/news/new_img2.png" alt="">
-                        <figcaption class="noticia__col-articulo__subt">
-                            <span>primera</span>
-                        </figcaption>
-                    </figure>
-                </article>
-            </div>
-        </div>
+        </section>
     </main>
 
     <!--footer-->

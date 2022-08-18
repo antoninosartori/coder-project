@@ -1,25 +1,12 @@
-/*...
-elementos con z index
-    nav = 100
-    botones del carrusel = 10
-
-COLORES
-paleta de colores 2 -> tono azul
-    --color-pri: #1c2039;
-    --color-sec: #fff;
-    --color-ter: #504e66;
-    --color-cua: #d9d9d9;    
-*/
-/*variables*/
-
-    /*colores*/
     $color1: #1c2039;
     $color2: #fff;
     $color3: #504e66;
-    $color4: #d9d9d942;     
-/*fuente*/
+    $color4: #d9d9d942;
+    $color1dark:#121426;     
+    $color2dark:#fff;     
+    $color3dark:#8380a7;     
+    $color4dark:#e3e3e35b;     
     $font1: 'roboto', sans-serif;
-
 
 *{
     padding: 0;
@@ -30,48 +17,26 @@ paleta de colores 2 -> tono azul
 
 body{
     font-family: $font1;
+    body.dark &{
+        background-color: $color1dark;
+    }
 }
 
 .header{
     background-color: $color1;
     height: 60px;
     width: 100%;
-
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
+    transition: 2s all ease;
+
+    body.dark & {
+        background-color: $color3dark;
+    }
 }
 
-/*ESTILOS GENERALES PARA LOS BOTONES*/
-
-.boton{
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-
-    margin: 0 auto;
-    padding: 8px 12px;
-
-    font-family: $font1;
-    color: $color1;
-
-    border: 1px solid $color1;
-    border-radius: 10px;
-}
-.boton:hover{
-    background-color: $color1;
-    color: $color2;
-    transition: .2s;
-}
-/*usado por el boton del carrusel*/
-.--boton-margin-btm{
-    margin-bottom: 10px;
-}
-/*usado por el boton en pagina de posiciones*/
-.--boton-margin-top{
-    margin-top: 30px;
-}
 
 /*--NAVEGADOR--*/
 .header__nav{
@@ -79,38 +44,45 @@ body{
     justify-content: space-between;
     max-width: 992px;
     margin: 0 auto;
-    
 }
 .header__nav__logo-container{/*Es la parte izquierda, donde esta el logo*/
     display: flex;
     height: 60px;
-    width: 100%;
     justify-content: space-between;
     align-items: center;
     margin-left: 40px;
-    
 }
 .header__nav__logo-container__logo{
     height: 40px;
 }
-.header__nav__logo-container__texto{/*texto que se muestra solo en responsive*/
-    display: none;
-    font-family: $font1;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $color2;
-    font-size: 18px;
-    margin: 0 auto;
-    
-    
+
+
+/*modo oscuro o claro*/
+.header__nav__modo-oscuro-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    i{
+        position: absolute;
+        font-size: 20px;
+        color: $color2;
+        transition: all .2s;
+        &:hover{
+            cursor: pointer;
+            filter: contrast(80%);
+            transition: all .2s;
+        }
+    }
+}
+
+.btn-invisible{
+    opacity: 0;
 }
 
 .header__nav__menu{/*Es el contenedor de la lista(ul)*/
     display: flex;
     margin-right: 40px;
     align-items: center;
-    
 }
 
 .header__nav__menu__item{/*Es contenedor del enlace*/
@@ -124,20 +96,53 @@ body{
     text-transform: uppercase;
     padding: 5px 12px;
     border-radius: 5px;
-}
-.header__nav__menu__item__link:hover{
-    background-color: $color4;
-    transition: .2s;
+    &:hover{
+        background-color: $color4;
+        transition: .2s;
+    }
 }
 
 .header__nav-toggle{/*Es el menu bar para cuando sea responsive*/
     display: none;
     width: 40px;    
     border: none;
+    &:hover{
+        cursor: pointer;
+    }
 }
 
-.header__nav-toggle:hover{
-    cursor: pointer;
+/*ESTILOS GENERALES PARA LOS BOTONES*/
+.boton{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 8px 12px;
+    font-family: $font1;
+    color: $color1;
+    border: 1px solid $color1;
+    border-radius: 10px;
+    &:hover{
+        background-color: $color1;
+        color: $color2;
+        transition: .2s;
+    }
+    body.dark &{
+        color: $color2dark;
+        border: 1px solid $color2dark;
+        &:hover{
+            background-color: $color2dark;
+            color: $color1dark;
+        }
+    }
+}
+/*usado por el boton del carrusel*/
+.--boton-margin-btm{
+    margin-bottom: 10px;
+}
+/*usado por el boton en pagina de posiciones*/
+.--boton-margin-top{
+    margin-top: 30px;
 }
 
 
@@ -147,6 +152,10 @@ body{
     height: 100%;
     width: 100%;
     padding-top: 60px;
+    transition: 2s all ease;
+    body.dark &{
+        background-color: $color1dark;
+    }
 }
 
 /*CONTENEDOR DE PARTIDOS*/
@@ -154,7 +163,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-
     height: 100px;
     max-width: 992px;
     margin: 0 auto;
@@ -163,10 +171,8 @@ body{
 
 .carrusel__fila{
     position: relative;
-
     display: flex;
     justify-content: center;
-
     height: 100%;
     max-width: 992px;
 }
@@ -180,17 +186,18 @@ body{
     line-height: 40px;
     font-size: 40px;
     text-align: center;
-
     height: 50px;
     width: 50px;
-
     background-color: $color1;
     color: $color2;
-
     border: none;
     border-radius: 50%;
     cursor: pointer;
     opacity: 40%;
+    body.dark &{
+        background-color: $color2dark;
+        color: $color1dark;
+    }
 }
 
 .carrusel__fila__btn-anterior{
@@ -207,7 +214,6 @@ body{
 }
 
 .carrusel__fila__lista{
-    
     overflow: hidden;
     width: 80%;
     display: flex;
@@ -219,15 +225,27 @@ body{
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 8fr 1fr;
     align-items: center;
-
     height: 100%;
     margin-right: 30px;
     padding: 10px;
-    
     background-color: $color2;
     color: $color1;
     border: 1px solid $color1;
     border-radius: 10px;
+    &:hover{
+        background-color: $color3;
+        color: $color2;
+        transition: .2s;
+    }
+    body.dark &{
+        background-color: $color1dark;
+        color: $color2dark;
+        border: 1px solid $color2dark;
+        &:hover{
+            background-color: $color3dark;
+            color: $color2dark;
+        }
+    }
     span{
         font-family: $font1;
         font-size: 18px;
@@ -236,11 +254,6 @@ body{
         align-items: center;
         justify-content: center;
     }
-}
-.carrusel__fila__lista__partido:hover {
-    background-color: $color3;
-    color: $color2;
-    transition: .2s;
 }
 
 .carrusel__fila__lista__partido__escudo-local, .carrusel__fila__lista__partido__escudo-visita{
@@ -264,6 +277,9 @@ body{
     grid-column: 2/3;
     grid-row: 1/2;
     border-bottom: 1px solid $color1;
+    body.dark &{
+        border-bottom: 1px solid $color2dark;
+    }
 }
 
 .carrusel__fila__lista__partido__equipo-visita{
@@ -298,9 +314,12 @@ body{
     width: 100%;
     h1{
         font-size: 40px;
-    font-family: $font1;
-    font-weight: 700;
-    color: $color1;
+        font-family: $font1;
+        font-weight: 700;
+        color: $color1;
+        body.dark &{
+            color: $color2dark;
+        }
     }
     h2{
         font-size: 25px;
@@ -308,6 +327,9 @@ body{
         font-weight: 700;
         color: $color1;
         flex-grow: 1;
+        body.dark &{
+            color: $color2dark;
+        }
     }
     p{
         font-size: 20px;
@@ -315,6 +337,9 @@ body{
         color: $color1;
         flex-grow: 1;
         padding: 10px 0;
+        body.dark &{
+            color: $color2dark;
+        }
     }
 }
 
@@ -352,17 +377,24 @@ body{
     flex-direction: column;
     padding: 10px;
     height: 100%;
-}
-.noticia__col-articulo:hover{
-    background-color: $color4;
-    border-radius: 10px;
-    transition: .2s;
+    &:hover{
+        background-color: $color4;
+        border-radius: 10px;
+        transition: .2s;
+        body.dark &{
+            background-color: $color4dark;
+        }
+    }
 }
 
 /*contenedor del figure*/
 .noticia__col-articulo__img{
     position: relative;
     /*estilo de la imagen de la noticia*/
+    &:hover .noticia__col-articulo__subt{
+        opacity: 1;
+        transition: .2s;
+    }
     img{
         width: 100%;
         border-radius: 5px;
@@ -378,15 +410,11 @@ body{
     font-family: $font1;
     color: $color2;
     border-radius: 10px;
-
     position: absolute;
     bottom: 15px;
     left: 15px;
 }
-.noticia__col-articulo__img:hover .noticia__col-articulo__subt{
-    opacity: 1;
-    transition: .2s;
-}
+
 /*ESTILOS DEL BOTON DE NEWS*/
 .noticias__boton{
     display: flex;
@@ -400,23 +428,23 @@ body{
 .index__posiciones{
     display: flex;
     justify-content: center;
-
     height: 350px;
     max-width: 992px;
     margin: 100px auto;
     padding-top: 50px;
-    
     border-top: 5px solid $color1;
     h3{
         width: 100%;
         padding: 10px;
-    
         color: $color1;
         font-family: $font1;
         font-weight: 700;
         font-size: 25px;
         text-transform: uppercase;
         text-align: center;
+        body.dark &{
+            color: $color2dark;
+        }
     }
 }
 
@@ -425,12 +453,9 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-
     height: 100%;
     width: 49%;
-
     margin-right: 2%;
-
     border-radius: 10px;    
 }
 
@@ -439,21 +464,17 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-
     height: 100%;
     width: 49%;
-
     border-radius: 10px;
 }
 
 .posiciones__tabla{
     width: 95%;
     padding: 10px;
-
     font-family: $font1;
     color: $color1;
     text-transform: uppercase;
-
     border-collapse:collapse;
 }
 
@@ -470,6 +491,11 @@ body{
     tr{
         td{
             padding: 5px;
+            &:hover{
+                cursor:pointer;
+                background-color: $color3;
+                color: $color2;
+            }
         }
     }
 }
@@ -513,21 +539,20 @@ body{
 .galeria{
     display: flex;
     flex-direction: column;
-
     max-width: 992px;
     margin: 0 auto;
     padding-top: 30px;
-
     border-top: 5px solid $color1;
     h3{
         font-family: $font1;
-    text-transform: uppercase;
-    font-size: 40px;
-    text-align: center;
-
-    margin-bottom: 30px;
-
-    color: $color1;
+        text-transform: uppercase;
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 30px;
+        color: $color1;
+        body.dark &{
+            color: $color2dark;
+        }
     }
 } 
 
@@ -536,9 +561,7 @@ body{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1 fr);
     gap: 8px;
-
     height: 600px;
-
     margin-bottom: 30px;
 }
 
@@ -552,12 +575,12 @@ body{
     filter:grayscale(80%);
     filter: brightness(60%);
     transition: all .7s;
-}
-.galeria__grid__grid-item:hover{
-    cursor: pointer;
-    filter: grayscale(0);
-    filter: brightness(100%);
-    transition: all .3s;
+    &:hover{
+        cursor: pointer;
+        filter: grayscale(0);
+        filter: brightness(100%);
+        transition: all .3s;
+    }
 }
 
 .galeria__item-1{
@@ -613,11 +636,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     height: 100%;
     max-width: 992px;
     margin: 0 auto;
-
     color: $color2;
 }
 
@@ -637,21 +658,38 @@ body{
 }
 
 .footer__contenido__right{
-    
     width: 30%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     img{
         height: 26px;
+        &:hover{
+            filter: contrast(10%);  
+            transition: .2s;  
+        }
     }
 }
 
-.footer__contenido__right img:hover{
-    filter: contrast(10%);  
-    transition: .2s;  
-}
 
+/* estilos generales para la clase container */
+.container{
+    width: 100vw;
+    height: calc(100vh - 60px);
+    background-color: $color2;
+    body.dark &{
+        background-color: $color1dark;
+        transition: all 2s ease;
+    }
+}
+.containerScrolleable{
+    width: 100vw;
+    background-color: $color2;
+    transition: all 2s ease;
+    body.dark &{
+        background-color: $color1dark;
+    }
+}
 
 /*---------------------------PAGINA DE NOTICIAS------------------------------------------------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -659,7 +697,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-
     padding-top: 70px;
 }
 
@@ -689,13 +726,10 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-
     height: calc(100vh - 60px);
     max-width: 992px;
-
     margin: 0 auto;
     padding-top: 70px;
-
     overflow: auto;
 }
 
@@ -704,32 +738,36 @@ body{
     text-transform: uppercase;
     text-align: center;
     font-size: 50px;
-
     margin-top: 30px;
-
     color: $color1;
+    body.dark &{
+        color: $color2dark;
+    }
 }
 
 .posiciones__selectores{
     width: 100%;
     display: flex;
     justify-content: center;
-
     margin: 30px auto;
     select{
         font-family: $font1;
         font-size: 20px;
         text-transform: uppercase;
-        
         margin: 0 20px;
         padding: 8px 12px;
-    
         background-color: $color2;
         color: $color1;
         border: none;
         border: 1px solid $color1;
         border-radius: 10px;
         outline: none;
+        &:hover{
+            background-color: $color3;
+            color: $color2;
+            cursor: pointer;
+            transition: all .2s;
+        }
     }
     option{
         color: $color2;
@@ -737,13 +775,6 @@ body{
         border-radius: 10px;
         outline: none;
     }
-}
-
-.posiciones__selectores select:hover{
-    background-color: $color3;
-    color: $color2;
-    cursor: pointer;
-    transition: all .2s;
 }
 
 .posiciones__tabla__equipo-responsive{
@@ -754,27 +785,19 @@ body{
     font-weight: 700;
 }
 
-.posiciones__tabla__body td:hover{
-    cursor:pointer;
-    background-color: $color3;
-    color: $color2;
-}
-
 
 /*-----------------PAGINA DE CALENDARIO----------------------------------------------------------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .calendario{
     height: calc(100vh - 60px);
     max-width: 992px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     margin: 0 auto;
     padding-top: 70px;
-
     overflow: auto;
+    
 }
 
 .calendario__tabla{
@@ -796,12 +819,15 @@ body{
     width: 100%;
     padding-top: 70px;
     overflow: auto;
+    background-color: $color2;
+    body.dark &{
+        background-color: $color1dark;
+    }
 }
 
 .contacto__flex-container{
     display: flex;
     justify-content: center;
-
     max-width: 992px;
     margin: 0 auto;
     margin-top: 60px;
@@ -812,7 +838,6 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     width: 49%;
 }
 
@@ -820,16 +845,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: max-content;
     padding: 2px;
-
     border-radius: 10px;
     background-color: $color2;
-}
-.contacto__flex-container__col-izq__mapa:hover{
-    background-color: $color1;
-    transition: .4s;
+    &:hover{
+        background-color: $color1;
+        transition: .4s;
+    }
 }
 
 iframe{
@@ -841,15 +864,19 @@ iframe{
     span{
         display: flex;
         align-items: center;
-
         font-family: $font1;
         font-size: 18px;
         color: $color1;
-
         padding: 10px;
-        img{
+        body.dark &{
+            color: $color2dark;
+        }
+        i{
             height: 20px;
             margin-right: 20px;
+            body.dark &{
+                color: $color2dark;
+            }
         }
     }
 }
@@ -871,30 +898,26 @@ iframe{
     font-size: 20px;
     font-family: $font1;
     color: $color2;
-
     margin-bottom: 5px;
     padding: 10px;
-
     border: none;
     border-radius: 10px;
     resize: none;
     outline: none;
     background-color: $color1;
-}
-
-.contacto__form__input::placeholder{
-    font-size: 16px;
-    font-weight: 100;
-    color: $color2;
+    &:hover{
+        background-color: $color3;
+        transition: .2s;
+    }
+    &::placeholder{
+        font-size: 16px;
+        font-weight: 100;
+        color: $color2;
+    }
 }
 
 .--btn-enviar:hover{
     cursor: pointer;
-}
-
-.contacto__form__input:hover{
-    background-color: $color3;
-    transition: .2s;
 }
 
 
@@ -959,10 +982,8 @@ iframe{
         position: fixed;
         left: 0;
         top: 50px;
-        
         width: 100%;
         height: calc(100% - 50px);
-        
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
@@ -970,7 +991,6 @@ iframe{
         margin-right: 15px;
         padding-left: 50px;
         overflow-y: auto;
-        
         left: 100%;
         transition: left .3s;
     }
@@ -1057,7 +1077,6 @@ iframe{
         font-family: $font1;
         color: #d9d9d9;
         border-radius: 10px;
-
         position: absolute;
         bottom: 15px;
         left: 15px;
@@ -1074,7 +1093,6 @@ iframe{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
         height: 600px;
         margin: 100px auto;
         padding-top: 30px;
@@ -1087,7 +1105,6 @@ iframe{
     .index__posiciones__col-izq{
         flex-direction: column;
         justify-content: space-evenly;
-
         width: 90%;
         margin-right: 0;    
     }
@@ -1095,7 +1112,6 @@ iframe{
     .index__posiciones__col-der{
         flex-direction: column;
         justify-content: space-evenly;
-
         width: 90%;
         border-radius: 0px;
         border-top: 1px solid $color1;
@@ -1123,9 +1139,7 @@ iframe{
     .galeria__grid{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-
         gap: 4px;
-
         margin-bottom: 20px;
     }
 
@@ -1172,9 +1186,7 @@ iframe{
         flex-direction: column;
         justify-content: unset;
         align-items: center;
-    
         width: 100%;
-    
         border-top: none;
     }
     
@@ -1247,9 +1259,7 @@ iframe{
     .footer{
         width: 100%;
         height: 60px;
-    
         background-color: $color1;
-        margin-top: 10px;
     }
 
     .footer__contenido{
@@ -1297,9 +1307,7 @@ iframe{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-
         width: 100%;
-
         padding: 5px;
         margin-top: 20px;
     }
@@ -1324,7 +1332,6 @@ iframe{
         }
     }
 }
-
 
 
 @media (max-width: 425px){
@@ -1373,7 +1380,6 @@ iframe{
         .calendario .posiciones__selectores select{
             font-size: 16px;
             text-transform: uppercase;
-            
             margin: 0 10px;
             padding: 6px 10px;
         }

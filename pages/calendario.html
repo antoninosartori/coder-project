@@ -7,6 +7,8 @@
     <title>LIGA GUALEGUAYCHU</title>
     <!--icono de la pagina-->
     <link rel="shortcut icon" href="../img/ligalogocolor.svg">
+    <!--link de fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--estilos del carrusel js-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
     <!--estilos generales css-->
@@ -15,8 +17,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <!--Etiqueta para el carrusel-->
-    <script defer src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
     <script defer src="../script/main.js"></script>
 </head>
 <body>
@@ -25,7 +25,10 @@
         <nav class="header__nav">
             <div class="header__nav__logo-container">
                 <a href="../index.html"><img class="header__nav__logo-container__logo" src="../img/ligalogocolor.svg" alt=""></a>
-                <a href="../index.html" class="header__nav__logo-container__texto">futbol gualeguaychu</a>
+            </div>
+            <div class="header__nav__modo-oscuro-container">
+                <i id="sol" class="fa-solid fa-sun btn-invisible"></i>
+                <i id="luna" class="fa-solid fa-moon"></i>
             </div>
             <button class="header__nav-toggle"><img class="nav-bar" src="../ico/bars-solid.svg" alt=""></button>
             <ul class="header__nav__menu">
@@ -49,131 +52,133 @@
     </header>
 
     <!--calendario-->
-    <main class="calendario">
-        <h1 class="titulo-section">calendario</h1>
-        <div class="posiciones__selectores">
-            <select name="" id="">
-                <option value="a">division a</option>
-                <option value="b">division b</option>
-            </select>
-            <select name="" id="">
-                <option value="1">fecha 1</option>
-                <option value="2">fecha 2</option>
-            </select>
-            <select name="" id="">
-                <option value="primera">primera</option>
-                <option value="sub20">sub 20</option>
-            </select>
-        </div>
-        <div class="calendario__tabla">
-            <table class="posiciones__tabla">
-                <thead class="posiciones__tabla__header">
-                    <tr>
-                        <th class="--border-top-left --th-equipo">local</th>
-                        <th colspan="2" class="--th-goles">goles</th>
-                        <th class="--border-top-right --th-equipo">visita</th>
-                    </tr>
-                </thead>
-                <tbody class="posiciones__tabla__body">
-                    <!-- una fila -->
-                    <tr class="--row-ligthgray">
-                        <td class="--tbl-text-left --td-flex-start calendario__tabla__body__equipo">
-                            <span>
-                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/CCL.svg" alt="">
-                            </span>
-                            <span class="posiciones__tabla__equipo">central larroque</span>
-                            <span class="posiciones__tabla__equipo-responsive">ccl</span>
-                        </td>
-                        <td class="calendario__tabla__body__gol">1</td>
-                        <td class="calendario__tabla__body__gol">2</td>
-                        <td class="--tbl-text-right --td-flex-end calendario__tabla__body__equipo">
-                            <span class="posiciones__tabla__equipo">juventud unida</span>
-                            <span class="posiciones__tabla__equipo-responsive">ju (g)</span>
-                            <span>
-                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/juv_unida_gchu.svg" alt="">
-                            </span>
-                        </td>
-                    </tr>
-                    <!-- una fila -->
-                    <tr class="--row-gray">
-                        <td class="--tbl-text-left --td-flex-start calendario__tabla__body__equipo">
-                            <span>
-                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/deportivo_urd.svg" alt="">
-                            </span>
-                            <span class="posiciones__tabla__equipo">deportivo urdinarrain</span>
-                            <span class="posiciones__tabla__equipo-responsive">cdu</span>
-                        </td>
-                        <td class="calendario__tabla__body__gol">2</td>
-                        <td class="calendario__tabla__body__gol">2</td>
-                        <td class="--tbl-text-right --td-flex-end calendario__tabla__body__equipo">
-                            <span class="posiciones__tabla__equipo">juventud urdinarrain</span>
-                            <span class="posiciones__tabla__equipo-responsive">juv (u)</span>
-                            <span>
-                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/juv_urd.svg" alt="">
-                            </span>
-                        </td>
-                    </tr>
-                    <!-- una fila -->
-                    <tr class="--row-ligthgray">
-                        <td class="--tbl-text-left --td-flex-start calendario__tabla__body__equipo">
-                            <span>
-                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/central_entrerriano.svg" alt="">
-                            </span>
-                            <span class="posiciones__tabla__equipo">central entrerriano</span>
-                            <span class="posiciones__tabla__equipo-responsive">cce</span>
-                        </td>
-                        <td class="calendario__tabla__body__gol">2</td>
-                        <td class="calendario__tabla__body__gol">0</td>
-                        <td class="--tbl-text-right --td-flex-end calendario__tabla__body__equipo">
-                            <span class="posiciones__tabla__equipo">sudamerica</span>
-                            <span class="posiciones__tabla__equipo-responsive">sud</span>
-                            <span>
-                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/sudamerica.svg" alt="">
-                            </span>
-                        </td>
-                    </tr>
-                    <!-- una fila -->
-                    <tr class="--row-gray">
-                        <td class="--tbl-text-left --td-flex-start calendario__tabla__body__equipo">
-                            <span>
-                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/def_oeste.svg" alt="">
-                            </span>
-                            <span class="posiciones__tabla__equipo">defensores del oeste</span>
-                            <span class="posiciones__tabla__equipo-responsive">def</span>
-                        </td>
-                        <td class="calendario__tabla__body__gol">1</td>
-                        <td class="calendario__tabla__body__gol">0</td>
-                        <td class="--tbl-text-right --td-flex-end calendario__tabla__body__equipo">
-                            <span class="posiciones__tabla__equipo">sarmiento</span>
-                            <span class="posiciones__tabla__equipo-responsive">sar</span>
-                            <span>
-                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/SAR.svg" alt="">
-                            </span>
-                        </td>
-                    </tr>
-                    <!-- una fila -->
-                    <tr class="--row-ligthgray">
-                        <td class="--tbl-text-left --td-flex-start calendario__tabla__body__equipo">
-                            <span>
-                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/union.svg" alt="">
-                            </span>
-                            <span class="posiciones__tabla__equipo">union</span>
-                            <span class="posiciones__tabla__equipo-responsive">uni</span>
-                        </td>
-                        <td class="calendario__tabla__body__gol">0</td>
-                        <td class="calendario__tabla__body__gol">0</td>
-                        <td class="--tbl-text-right --td-flex-end calendario__tabla__body__equipo">
-                            <span class="posiciones__tabla__equipo">cerro porteño</span>
-                            <span class="posiciones__tabla__equipo-responsive">cp</span>
-                            <span>
-                                <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/cerro.svg" alt="">
-                            </span>
-                        </td>
-                    </tr>
-                </tbody>
-        </table>
-        </div>
-        <a href="./posiciones.html" class="boton --boton-margin-top">ver posiciones</a>
+    <main class="container">
+        <section class="calendario">
+            <h1 class="titulo-section">calendario</h1>
+            <div class="posiciones__selectores">
+                <select name="" id="">
+                    <option value="a">division a</option>
+                    <option value="b">division b</option>
+                </select>
+                <select name="" id="">
+                    <option value="1">fecha 1</option>
+                    <option value="2">fecha 2</option>
+                </select>
+                <select name="" id="">
+                    <option value="primera">primera</option>
+                    <option value="sub20">sub 20</option>
+                </select>
+            </div>
+            <div class="calendario__tabla">
+                <table class="posiciones__tabla">
+                    <thead class="posiciones__tabla__header">
+                        <tr>
+                            <th class="--border-top-left --th-equipo">local</th>
+                            <th colspan="2" class="--th-goles">goles</th>
+                            <th class="--border-top-right --th-equipo">visita</th>
+                        </tr>
+                    </thead>
+                    <tbody class="posiciones__tabla__body">
+                        <!-- una fila -->
+                        <tr class="--row-ligthgray">
+                            <td class="--tbl-text-left --td-flex-start calendario__tabla__body__equipo">
+                                <span>
+                                    <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/CCL.svg" alt="">
+                                </span>
+                                <span class="posiciones__tabla__equipo">central larroque</span>
+                                <span class="posiciones__tabla__equipo-responsive">ccl</span>
+                            </td>
+                            <td class="calendario__tabla__body__gol">1</td>
+                            <td class="calendario__tabla__body__gol">2</td>
+                            <td class="--tbl-text-right --td-flex-end calendario__tabla__body__equipo">
+                                <span class="posiciones__tabla__equipo">juventud unida</span>
+                                <span class="posiciones__tabla__equipo-responsive">ju (g)</span>
+                                <span>
+                                    <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/juv_unida_gchu.svg" alt="">
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- una fila -->
+                        <tr class="--row-gray">
+                            <td class="--tbl-text-left --td-flex-start calendario__tabla__body__equipo">
+                                <span>
+                                    <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/deportivo_urd.svg" alt="">
+                                </span>
+                                <span class="posiciones__tabla__equipo">deportivo urdinarrain</span>
+                                <span class="posiciones__tabla__equipo-responsive">cdu</span>
+                            </td>
+                            <td class="calendario__tabla__body__gol">2</td>
+                            <td class="calendario__tabla__body__gol">2</td>
+                            <td class="--tbl-text-right --td-flex-end calendario__tabla__body__equipo">
+                                <span class="posiciones__tabla__equipo">juventud urdinarrain</span>
+                                <span class="posiciones__tabla__equipo-responsive">juv (u)</span>
+                                <span>
+                                    <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/juv_urd.svg" alt="">
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- una fila -->
+                        <tr class="--row-ligthgray">
+                            <td class="--tbl-text-left --td-flex-start calendario__tabla__body__equipo">
+                                <span>
+                                    <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/central_entrerriano.svg" alt="">
+                                </span>
+                                <span class="posiciones__tabla__equipo">central entrerriano</span>
+                                <span class="posiciones__tabla__equipo-responsive">cce</span>
+                            </td>
+                            <td class="calendario__tabla__body__gol">2</td>
+                            <td class="calendario__tabla__body__gol">0</td>
+                            <td class="--tbl-text-right --td-flex-end calendario__tabla__body__equipo">
+                                <span class="posiciones__tabla__equipo">sudamerica</span>
+                                <span class="posiciones__tabla__equipo-responsive">sud</span>
+                                <span>
+                                    <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/sudamerica.svg" alt="">
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- una fila -->
+                        <tr class="--row-gray">
+                            <td class="--tbl-text-left --td-flex-start calendario__tabla__body__equipo">
+                                <span>
+                                    <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/def_oeste.svg" alt="">
+                                </span>
+                                <span class="posiciones__tabla__equipo">defensores del oeste</span>
+                                <span class="posiciones__tabla__equipo-responsive">def</span>
+                            </td>
+                            <td class="calendario__tabla__body__gol">1</td>
+                            <td class="calendario__tabla__body__gol">0</td>
+                            <td class="--tbl-text-right --td-flex-end calendario__tabla__body__equipo">
+                                <span class="posiciones__tabla__equipo">sarmiento</span>
+                                <span class="posiciones__tabla__equipo-responsive">sar</span>
+                                <span>
+                                    <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/SAR.svg" alt="">
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- una fila -->
+                        <tr class="--row-ligthgray">
+                            <td class="--tbl-text-left --td-flex-start calendario__tabla__body__equipo">
+                                <span>
+                                    <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/union.svg" alt="">
+                                </span>
+                                <span class="posiciones__tabla__equipo">union</span>
+                                <span class="posiciones__tabla__equipo-responsive">uni</span>
+                            </td>
+                            <td class="calendario__tabla__body__gol">0</td>
+                            <td class="calendario__tabla__body__gol">0</td>
+                            <td class="--tbl-text-right --td-flex-end calendario__tabla__body__equipo">
+                                <span class="posiciones__tabla__equipo">cerro porteño</span>
+                                <span class="posiciones__tabla__equipo-responsive">cp</span>
+                                <span>
+                                    <img class="carrusel__fila__lista__partido__escudo-local" src="../img/escudos/cerro.svg" alt="">
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+            </table>
+            </div>
+            <a href="./posiciones.html" class="boton --boton-margin-top">ver posiciones</a>
+        </section>
     </main>
 
     <!--footer-->
