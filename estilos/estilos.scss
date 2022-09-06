@@ -673,6 +673,7 @@ body{
     width: 100vw;
     height: calc(100vh - 60px);
     background-color: $color2;
+    overflow-y: auto;
     body.dark &{
         background-color: $color1dark;
         transition: all 2s ease;
@@ -726,7 +727,6 @@ body{
     max-width: 992px;
     margin: 0 auto;
     padding-top: 70px;
-    overflow: auto;
 }
 
 .titulo-section{
@@ -968,9 +968,8 @@ iframe{
         margin-left: 15px;
     }
 
-    .header__nav__logo-container__texto{/*texto que se muestra solo en responsive*/
-        display: block;
-        
+    .header__nav__logo-container__logo{
+        height: 22px;
     }
 
     .header__nav__menu{/*Es el contenedor de la lista(ul)*/
@@ -1005,6 +1004,7 @@ iframe{
         display: block;
         margin-right: 20px;
         background-color: transparent;
+        width: 22px;
     }
     .nav-menu_visible{
         left: 0;

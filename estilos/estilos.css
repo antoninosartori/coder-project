@@ -660,6 +660,7 @@ body.dark .galeria h3 {
   width: 100vw;
   height: calc(100vh - 60px);
   background-color: #fff;
+  overflow-y: auto;
 }
 body.dark .container {
   background-color: #121426;
@@ -713,7 +714,6 @@ body.dark .containerScrolleable {
   max-width: 992px;
   margin: 0 auto;
   padding-top: 70px;
-  overflow: auto;
 }
 
 .titulo-section {
@@ -944,8 +944,8 @@ body.dark .contacto__flex-container__col-izq__info span i {
     height: 50px;
     margin-left: 15px;
   }
-  .header__nav__logo-container__texto { /*texto que se muestra solo en responsive*/
-    display: block;
+  .header__nav__logo-container__logo {
+    height: 22px;
   }
   .header__nav__menu { /*Es el contenedor de la lista(ul)*/
     position: fixed;
@@ -976,6 +976,7 @@ body.dark .contacto__flex-container__col-izq__info span i {
     display: block;
     margin-right: 20px;
     background-color: transparent;
+    width: 22px;
   }
   .nav-menu_visible {
     left: 0;
